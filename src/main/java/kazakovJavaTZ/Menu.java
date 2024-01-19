@@ -29,8 +29,9 @@ public class Menu {
 
     public void exeTwo() {
         scanner = new Scanner(System.in);
-        System.out.println("Задание 2. \nВывести Привет,Вячеслав если совпадет вводс именем Вячеслав");
+        System.out.println("Задание 2. \nВывести Привет,Вячеслав если совпадет ввод с именем Вячеслав");
         System.out.println();
+        System.out.print("Введите строку: ");
         String str = scanner.nextLine();
         if ("Вячеслав".equals(str)) {
             System.out.println("-----------------");
