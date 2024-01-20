@@ -19,7 +19,7 @@ public class Menu {
         System.out.println();
         System.out.print("Введите: ");
         int number = scanner.nextInt();
-        if (number > 7) {
+        if (number > 7 && number < 2147483647) {
             System.out.println("Привет");
         } else {
             System.out.println("Введите больше 7");
@@ -53,7 +53,14 @@ public class Menu {
             mass = new int[lenght];
             System.out.println("Условия соблюдены, теперь заполним массив цифрами");
             for (int i = 0; i < lenght; i++) {
-                mass[i] = scanner.nextInt();
+                int number = scanner.nextInt();
+                if (number > 0 && number <= 100) {
+                    mass[i] = number;
+                } else {
+                    System.out.println("Введите снова число так как это число находится " +
+                            "не в заданном диапазоне: от 1 до 100");
+                    i--;
+                }
             }
             for (int i = 0; i < mass.length; i++) {
                 if (mass[i] != 0 && mass[i] % 3 == 0) {
